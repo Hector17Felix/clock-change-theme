@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambio de tema según hora</title>
+  <style>
+    /* Estilos para el tema claro */
+    .light-theme {
+      background-color: white;
+      color: black;
+    }
+    /* Estilos para el tema oscuro */
+    .dark-theme {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a mi sitio web</h1>
+  <p>Este sitio web cambia de tema según la hora del día.</p>
+  
+  <script>
+    // Obtenemos la hora actual
+    var date = new Date();
+    var hour = date.getHours();
+    
+    // Comprobamos si es de día o de noche
+    if (hour >= 6 && hour < 18) {
+      // Es de día, aplicamos el tema claro
+      document.body.classList.add("light-theme");
+    } else {
+      // Es de noche, aplicamos el tema oscuro
+      document.body.classList.add("dark-theme");
+    }
+  </script>
+</body>
+</html>
